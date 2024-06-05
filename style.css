@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  color: #404040;
+}
+
+section {
+  padding: 6.1rem;
+}
+
+.texto {
+  display: flex;
+  flex-flow: column;
+  gap: 0.82rem;
+}
+
+.popup {
+  display: none;
+
+  & .conteiner {
+    position: relative;
+    width: 40rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: left;
+    gap: 1.02rem;
+    padding: 3.12rem;
+    border-radius: 3rem;
+    background-color: #fdf1d7;
+    box-shadow: inset 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.15);
+
+    & .titulo {
+      font-weight: 700;
+      font-size: 1.92rem;
+      text-align: center;
+    }
+
+    & .botao {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+        padding: 0.82rem 3.12rem;
+        border-radius: 4rem;
+        border: solid #49546b 2px;
+        border-right-width: 4px;
+        border-bottom-width: 4px;
+        background-color: #d8e4fe;
+      }
+
+      &:hover,
+      &:active {
+        border-width: 3px;
+      }
+    }
+
+    & .fechar {
+      font-weight: 700;
+      border: solid 1px #404040;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      background-color: #d8e4fe;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  &.aberto {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2.5px);
+  }
+}
